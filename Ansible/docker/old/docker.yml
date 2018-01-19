@@ -1,0 +1,11 @@
+---
+- hosts: ubuntu_hosts
+  sudo: yes
+  tasks:
+    - name: Install docker
+      apt: pkg=docker.io state=installed update_cache=true
+      notify:
+        - start docker
+  handlers:
+    - name: start docker
+      service: name=docker state=started

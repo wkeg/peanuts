@@ -1,0 +1,10 @@
+---
+- hosts: dell_hosts
+  sudo: yes
+  gather_facts: False
+  environment:
+    http_proxy: <http://proxy_FQDN>
+    https_proxy: <http://proxy_FQDN>
+  tasks:
+    - name: Deploy Docker vdbench container
+      shell: docker run --device=/dev/sdc:/dev/xvdc -v /dev/sda:/dev/sda -v /dev/sdb:/dev/adb -v /dev/sdc:/dev/sdc -v /dev/sdd:/dev/sdd -v /dev/sde:/dev/sde -v /dev/sdf:/dev/sdf -v /dev/sdg:/dev/sdg -v /dev/sdh:/dev/sdh  -i --name DellTaco wmckeigney/vdbench

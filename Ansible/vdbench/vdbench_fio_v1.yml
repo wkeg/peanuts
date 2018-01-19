@@ -1,0 +1,9 @@
+---
+- hosts: dell_hosts
+  sudo: yes
+  gather_facts: False
+  tasks:
+    - name: Deploy Docker vdbench container
+      shell: docker run --device=/dev/sda:/dev/xvdc  -i --name DellTaco wmckeigney/vdbench
+    - name: Install Linux FIO
+      apt: pkg=fio state=installed update_cache=true

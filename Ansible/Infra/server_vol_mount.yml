@@ -1,0 +1,101 @@
+---
+- hosts: dell_hosts
+  sudo: yes
+  gather_facts: False
+  tasks:
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sda
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sdb
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sdc
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sdd
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sde
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sdf
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sdg
+    - name: Create drive partitions
+      filesystem:
+        fstype: ext4
+        dev: /dev/sdh
+    - name: create mount point in the root directory
+      file: path=/sda state=directory
+    - name: create mount point in the root directory
+      file: path=/sdb state=directory
+    - name: create mount point in the root directory
+      file: path=/sdc state=directory
+    - name: create mount point in the root directory
+      file: path=/sdd state=directory
+    - name: create mount point in the root directory
+      file: path=/sde state=directory
+    - name: create mount point in the root directory
+      file: path=/sdf state=directory
+    - name: create mount point in the root directory
+      file: path=/sdg state=directory
+    - name: create mount point in the root directory
+      file: path=/sdh state=directory
+    - name: mount /dev/sda to /sda
+      mount:
+        path: /sda
+        src: /dev/sda
+        fstype: ext4
+        state: mounted
+    - name: Mount /dev/sdb to /sdb
+      mount:
+        path: /sdb
+        src: /dev/sdb
+        fstype: ext4
+        state: mounted
+    - name: Mount /dev/sdc to /sdc
+      mount:
+        path: /sdc
+        src: /dev/sdc
+        fstype: ext4
+        state: mounted
+    - name: Mount /dev/sdd to /sdd
+      mount:
+        path: /sdd
+        src: /dev/sdd
+        fstype: ext4
+        state: mounted
+    - name: Mount /dev/sde to /sde
+      mount:
+        path: /sde
+        src: /dev/sde
+        fstype: ext4
+        state: mounted
+    - name: Mount /dev/sdf to /sdf
+      mount:
+        path: /sdf
+        src: /dev/sdf
+        fstype: ext4
+        state: mounted
+    - name: Mount /dev/sdg to /sdg
+      mount:
+        path: /sdg
+        src: /dev/sdg
+        fstype: ext4
+        state: mounted
+    - name: Mount /dev/sdh to /sdh
+      mount:
+        path: /sdh
+        src: /dev/sdh
+        fstype: ext4
+        state: mounted
