@@ -7,4 +7,4 @@
     https_proxy: <http://proxy_FQDN>
   tasks:
     - name: Deploy Docker vdbench container
-      shell: docker run --device=/dev/sdc:/dev/xvdc -v /dev/sda:/dev/sda -v /dev/sdb:/dev/adb -v /dev/sdc:/dev/sdc -v /dev/sdd:/dev/sdd -v /dev/sde:/dev/sde -v /dev/sdf:/dev/sdf -v /dev/sdg:/dev/sdg -v /dev/sdh:/dev/sdh  -i --name DellTaco wmckeigney/vdbench
+      shell: docker run --device=/dev/sdc:/dev/xvdc --device=/dev/sda:/dev/sdax --device=/dev/sdb:/dev/sdbx --device=/dev/sdd:/dev/sddx --device=/dev/sde:/dev/sdex --device=/dev/sdf:/dev/sdfx --device=/dev/sdg:/dev/sdgx --device=/dev/sdh:/dev/sdhx  -i --name DellTaco wmckeigney/vdbench
