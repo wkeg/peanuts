@@ -1,0 +1,3 @@
+#infomration for running graphite feed from vdbench
+
+./vdbench -f ./templates/filesystem_rdpct30 | ./vdbench_graphite.sh -h 10.1.84.68 -p 2003 -t vdbench
