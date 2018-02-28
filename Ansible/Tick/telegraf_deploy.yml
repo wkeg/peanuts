@@ -22,7 +22,7 @@
       lineinfile:
         path: /etc/telegraf/telegraf.conf
         regexp: '^  urls = '
-        line: urls = ["http://Tick_IP:8086"] #Required
+        line: urls = ["http://<Add_Tick_IP>:8086"] #Required
     - name: Replace username with correct username
       lineinfile:
         path: /etc/telegraf/telegraf.conf
