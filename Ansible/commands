@@ -1,0 +1,3 @@
+#run ansible play books with credentials
+
+ansible-playbook -l ubuntu_hosts xxxxxxxxx.yml --extra-vars "ansible_sudo_pass=xxxxxxxxx"
